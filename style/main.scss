@@ -374,6 +374,8 @@ hr {
       // Set background
       background: $mixed-background;
 
+      background-image: url('imgs/#{$power}.jpg');
+
       // Add glow
       $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
 
@@ -381,22 +383,8 @@ hr {
         box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, $glow-opacity / 1.8),
                     inset 0 0 0 1px rgba(white, $glow-opacity / 3);
       }
-
-      // Adjust font size for bigger numbers
-      @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
-
-        // Media queries placed here to avoid carrying over the rest of the logic
-        @include smaller($mobile-threshold) {
-          font-size: 25px;
-        }
-      } @else if $power >= 1000 {
-        font-size: 35px;
-
-        @include smaller($mobile-threshold) {
-          font-size: 15px;
-        }
-      }
+    
+      font-size: 0;
     }
 
     $exponent: $exponent + 1;
