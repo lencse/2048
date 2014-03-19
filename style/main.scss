@@ -369,6 +369,7 @@ hr {
       background: $mixed-background;
 
       background-image: url('imgs/#{$power}.jpg');
+      background-size: 100%;
 
       // Add glow
       $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
